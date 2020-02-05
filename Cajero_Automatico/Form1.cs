@@ -24,7 +24,7 @@ namespace Cajero_Automatico
             sbyte N = 0;
             string answer = "RESPUESTA:\n ";
             foreach (double denominacion  in demonimaciones){
-                while (denominacion<= cantidad ) {
+                while (denominacion<= Math.Round (cantidad, 2) ) {
                     N++;
                     cantidad -= denominacion;
                 }

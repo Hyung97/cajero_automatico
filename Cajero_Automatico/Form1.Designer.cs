@@ -97,7 +97,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(638, 237);
+            this.ClientSize = new System.Drawing.Size(638, 289);
             this.Controls.Add(this.lblAnswer);
             this.Controls.Add(this.btnConfirmar);
             this.Controls.Add(this.txtCantifdad);

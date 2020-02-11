@@ -53,35 +53,35 @@ namespace Cajero_Automatico
         //LA SUCESION COMIENZA CON LOS NUMEROS 0 Y 1
         //A PARTIR DE ESTOS, CADA TERMINO ES LA SUMA DE LOS DOS ANTERIORES
         //ES LA RELACION DE RECURRENCIA QUE LA DEFINE
-        private void btnFibo_Click(object sender, EventArgs e)
+        private void btnSucesionFibonacci_Click(object sender, EventArgs e)
         {
-            int N = int.Parse(txtFibonacci.Text), A = 0, B = 1, SM, i;
+            int N = int.Parse(txtSucesionDeFibonacci.Text), NANTERIOR = 0, BOCCI = 1, FINA, i;
             string Answer1 = "";
             for (i = 0; i < N; i++)
             {
-                SM = A;
-                A = B;
-                B = SM + A;
-                Answer1 += "LA SUMATORIA DE  " + A + " ES " + B + "\n";
+                FINA = NANTERIOR;
+                NANTERIOR = BOCCI;
+                BOCCI = FINA + NANTERIOR;
+                Answer1 += "LA SUMATORIA DE  " + NANTERIOR + " ES " + BOCCI + "\n";
                 lblFibonacci.Visible = true;
                 lblFibonacci.Text = "" + Answer1;
-                txtFibonacci.Text = "";
+                txtSucesionDeFibonacci.Text = "";
             }
         }
         //EL NUMERO PRIMO ES UN NUMERO ENTERO QUE SOLAMENTE ES DIVISIBLE POR EL MISMO 
         //Y POR LA UNIDAD 
-        private void btnPrimo_Click(object sender, EventArgs e)
+        private void btnResultadoPrimo_Click(object sender, EventArgs e)
         {
-            int A = 0, I, N;
-            N = int.Parse(txtPrimo.Text);
-            A = 0;
-            for (I = 1; I < (N + 1); I++)
-                if (N % I == 0)
-                    A++;
-            lblPrimoResp.Text = ((A != 2) ? N + " NO ES UN NUMERO PRIMO " : N + "  SI ES UN NUMERO PRIMO" + "\n");
+            int PEACE = 0, RS, NSR;
+            NSR = int.Parse(txtNumPrimo.Text);
+            PEACE = 0;
+            for (RS = 1; RS < (NSR + 1); RS++)
+                if (NSR % RS == 0)
+                    PEACE++;
+            lblPrimoResp.Text = ((PEACE != 2) ? NSR + " NO ES UN NUMERO PRIMO " : NSR + "  SI ES UN NUMERO PRIMO" + "\n");
         }
 
-        private void btnPago1_Click(object sender, EventArgs e)
+        private void btnCancelarPago_Click(object sender, EventArgs e)
         {
             double EfetivoEntregado = double.Parse(txtMoney.Text), Pagar = double.Parse(txtPagar.Text), TotalACancelar;
             double Answrs = 0;
@@ -100,7 +100,7 @@ namespace Cajero_Automatico
                     {
                         Answrs = EfetivoEntregado - Pagar;
                         TotalACancelar = Answrs;
-                        lblDevolucion.Text = "DINERO A DEVOLVER: " + TotalACancelar;
+                        lblDevolucion.Text = "DINERO A DEVOLVER: $" + TotalACancelar;
 
                     }
                 }

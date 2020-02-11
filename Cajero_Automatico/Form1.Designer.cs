@@ -39,18 +39,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblDevolucion = new System.Windows.Forms.Label();
-            this.btnPago1 = new System.Windows.Forms.Button();
+            this.btnCancelarPago = new System.Windows.Forms.Button();
             this.txtPagar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFibo = new System.Windows.Forms.Label();
             this.lblFibonacci = new System.Windows.Forms.Label();
-            this.txtFibonacci = new System.Windows.Forms.TextBox();
-            this.btnResolver = new System.Windows.Forms.Button();
+            this.txtSucesionDeFibonacci = new System.Windows.Forms.TextBox();
+            this.btnSucesionFibonacci = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnResultadoPrimo = new System.Windows.Forms.Button();
             this.lblPrimoResp = new System.Windows.Forms.Label();
-            this.txtPrimo = new System.Windows.Forms.TextBox();
+            this.txtNumPrimo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -63,9 +63,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 286);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -116,7 +116,7 @@
             // txtMoney
             // 
             this.txtMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMoney.Location = new System.Drawing.Point(199, 13);
+            this.txtMoney.Location = new System.Drawing.Point(202, 13);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.Size = new System.Drawing.Size(133, 26);
             this.txtMoney.TabIndex = 6;
@@ -141,7 +141,7 @@
             this.groupBox1.Controls.Add(this.btnConfirmar);
             this.groupBox1.Controls.Add(this.lblAnswer);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(237, 12);
+            this.groupBox1.Location = new System.Drawing.Point(94, 17);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(216, 284);
             this.groupBox1.TabIndex = 7;
@@ -151,12 +151,12 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.lblDevolucion);
-            this.groupBox2.Controls.Add(this.btnPago1);
+            this.groupBox2.Controls.Add(this.btnCancelarPago);
             this.groupBox2.Controls.Add(this.txtPagar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.lblMoney);
             this.groupBox2.Controls.Add(this.txtMoney);
-            this.groupBox2.Location = new System.Drawing.Point(460, 15);
+            this.groupBox2.Location = new System.Drawing.Point(316, 20);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(342, 281);
             this.groupBox2.TabIndex = 8;
@@ -174,21 +174,21 @@
             this.lblDevolucion.TabIndex = 5;
             this.lblDevolucion.Text = "RESPUESTA: ?";
             // 
-            // btnPago1
+            // btnCancelarPago
             // 
-            this.btnPago1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPago1.Location = new System.Drawing.Point(258, 78);
-            this.btnPago1.Name = "btnPago1";
-            this.btnPago1.Size = new System.Drawing.Size(75, 30);
-            this.btnPago1.TabIndex = 5;
-            this.btnPago1.Text = "PAGO";
-            this.btnPago1.UseVisualStyleBackColor = true;
-            this.btnPago1.Click += new System.EventHandler(this.btnPago1_Click);
+            this.btnCancelarPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarPago.Location = new System.Drawing.Point(258, 78);
+            this.btnCancelarPago.Name = "btnCancelarPago";
+            this.btnCancelarPago.Size = new System.Drawing.Size(75, 30);
+            this.btnCancelarPago.TabIndex = 5;
+            this.btnCancelarPago.Text = "PAGO";
+            this.btnCancelarPago.UseVisualStyleBackColor = true;
+            this.btnCancelarPago.Click += new System.EventHandler(this.btnCancelarPago_Click);
             // 
             // txtPagar
             // 
             this.txtPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPagar.Location = new System.Drawing.Point(200, 48);
+            this.txtPagar.Location = new System.Drawing.Point(202, 48);
             this.txtPagar.Name = "txtPagar";
             this.txtPagar.Size = new System.Drawing.Size(133, 26);
             this.txtPagar.TabIndex = 8;
@@ -228,34 +228,34 @@
             this.lblFibonacci.TabIndex = 14;
             this.lblFibonacci.Text = "RESPUESTA: ?";
             // 
-            // txtFibonacci
+            // txtSucesionDeFibonacci
             // 
-            this.txtFibonacci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFibonacci.Location = new System.Drawing.Point(117, 49);
-            this.txtFibonacci.Name = "txtFibonacci";
-            this.txtFibonacci.Size = new System.Drawing.Size(100, 26);
-            this.txtFibonacci.TabIndex = 13;
+            this.txtSucesionDeFibonacci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSucesionDeFibonacci.Location = new System.Drawing.Point(117, 49);
+            this.txtSucesionDeFibonacci.Name = "txtSucesionDeFibonacci";
+            this.txtSucesionDeFibonacci.Size = new System.Drawing.Size(100, 26);
+            this.txtSucesionDeFibonacci.TabIndex = 13;
             // 
-            // btnResolver
+            // btnSucesionFibonacci
             // 
-            this.btnResolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResolver.Location = new System.Drawing.Point(107, 81);
-            this.btnResolver.Name = "btnResolver";
-            this.btnResolver.Size = new System.Drawing.Size(117, 27);
-            this.btnResolver.TabIndex = 12;
-            this.btnResolver.Text = "RESULTADO";
-            this.btnResolver.UseVisualStyleBackColor = true;
-            this.btnResolver.Click += new System.EventHandler(this.btnFibo_Click);
+            this.btnSucesionFibonacci.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSucesionFibonacci.Location = new System.Drawing.Point(107, 81);
+            this.btnSucesionFibonacci.Name = "btnSucesionFibonacci";
+            this.btnSucesionFibonacci.Size = new System.Drawing.Size(117, 27);
+            this.btnSucesionFibonacci.TabIndex = 12;
+            this.btnSucesionFibonacci.Text = "RESULTADO";
+            this.btnSucesionFibonacci.UseVisualStyleBackColor = true;
+            this.btnSucesionFibonacci.Click += new System.EventHandler(this.btnSucesionFibonacci_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.lblFibo);
             this.groupBox3.Controls.Add(this.lblFibonacci);
-            this.groupBox3.Controls.Add(this.txtFibonacci);
-            this.groupBox3.Controls.Add(this.btnResolver);
+            this.groupBox3.Controls.Add(this.txtSucesionDeFibonacci);
+            this.groupBox3.Controls.Add(this.btnSucesionFibonacci);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(472, 304);
+            this.groupBox3.Location = new System.Drawing.Point(326, 305);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(332, 308);
             this.groupBox3.TabIndex = 16;
@@ -266,9 +266,9 @@
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.btnResultadoPrimo);
             this.groupBox4.Controls.Add(this.lblPrimoResp);
-            this.groupBox4.Controls.Add(this.txtPrimo);
+            this.groupBox4.Controls.Add(this.txtNumPrimo);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(197, 307);
+            this.groupBox4.Location = new System.Drawing.Point(51, 307);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(269, 305);
             this.groupBox4.TabIndex = 17;
@@ -283,7 +283,7 @@
             this.btnResultadoPrimo.TabIndex = 19;
             this.btnResultadoPrimo.Text = "RESULTADO";
             this.btnResultadoPrimo.UseVisualStyleBackColor = true;
-            this.btnResultadoPrimo.Click += new System.EventHandler(this.btnPrimo_Click);
+            this.btnResultadoPrimo.Click += new System.EventHandler(this.btnResultadoPrimo_Click);
             // 
             // lblPrimoResp
             // 
@@ -295,13 +295,13 @@
             this.lblPrimoResp.TabIndex = 18;
             this.lblPrimoResp.Text = "RESPUESTA: ?";
             // 
-            // txtPrimo
+            // txtNumPrimo
             // 
-            this.txtPrimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimo.Location = new System.Drawing.Point(81, 42);
-            this.txtPrimo.Name = "txtPrimo";
-            this.txtPrimo.Size = new System.Drawing.Size(100, 26);
-            this.txtPrimo.TabIndex = 17;
+            this.txtNumPrimo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumPrimo.Location = new System.Drawing.Point(81, 42);
+            this.txtNumPrimo.Name = "txtNumPrimo";
+            this.txtNumPrimo.Size = new System.Drawing.Size(100, 26);
+            this.txtNumPrimo.TabIndex = 17;
             // 
             // label4
             // 
@@ -319,7 +319,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(826, 624);
+            this.ClientSize = new System.Drawing.Size(681, 624);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -357,18 +357,18 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblDevolucion;
-        private System.Windows.Forms.Button btnPago1;
+        private System.Windows.Forms.Button btnCancelarPago;
         private System.Windows.Forms.TextBox txtPagar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblFibo;
         private System.Windows.Forms.Label lblFibonacci;
-        private System.Windows.Forms.TextBox txtFibonacci;
-        private System.Windows.Forms.Button btnResolver;
+        private System.Windows.Forms.TextBox txtSucesionDeFibonacci;
+        private System.Windows.Forms.Button btnSucesionFibonacci;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnResultadoPrimo;
         private System.Windows.Forms.Label lblPrimoResp;
-        private System.Windows.Forms.TextBox txtPrimo;
+        private System.Windows.Forms.TextBox txtNumPrimo;
         private System.Windows.Forms.Label label4;
     }
 }
